@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+    <display-name>ContinuationsExample</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>ContinuationsExampleServlet</servlet-name>
+        <servlet-class>com.example.jettycontinuations.ContinuationsExampleServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContinuationsExampleServlet</servlet-name>
+        <url-pattern>/ContinuationsExampleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NonContinuationsExampleServlet</servlet-name>
+        <servlet-class>com.example.jettycontinuations.NonContinuationsExampleServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NonContinuationsExampleServlet</servlet-name>
+        <url-pattern>/NonContinuationsExampleServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
