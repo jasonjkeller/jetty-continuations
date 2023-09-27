@@ -52,6 +52,9 @@ public class ContinuationsExampleServlet extends HttpServlet {
         // SUSPEND
         cont.suspend();
 
+        // This seems to cause an infinite loop of Jetty suspending/resuming the request
+//        cont.undispatch();
+
         response.getWriter().println("Request id is : " + requestId + " end: " + new Date());
 
         if (!cont.isInitial()) {
